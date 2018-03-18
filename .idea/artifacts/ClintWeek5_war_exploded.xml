@@ -2,12 +2,16 @@
   <artifact type="exploded-war" name="ClintWeek5:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/ClintWeek5_war_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="ClintWeek5/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="ClintWeek5" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="C:/Program Files/Java/jdk1.8.0_121/lib/ojdbc6.jar" />
+        </element>
       </element>
+      <element id="javaee-facet-resources" facet="ClintWeek5/web/Web2" />
+      <element id="javaee-facet-resources" facet="ClintWeek5/web/Web" />
     </root>
   </artifact>
 </component>

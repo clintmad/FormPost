@@ -9,31 +9,14 @@
 
 <body class="container-fluid">
     <div class="text-center row">
-        <h1 class="heading">Students</h1>
+        <h1 class="heading">Welcome to Clint's Servlet!</h1>
     </div>
-    <div class="row">
-        <div class="col-xs-4"></div>
-        <div class="col-xs-4">
-        <form method="post" action ="http://localhost:7070/formpost2">
-            <div class="form-group">
-                <label class="label">First Name:</label>
-                <input type="text" name="fName" class="form-control">
-            </div>
-            <div class="form-group">
-                <label class="label">Last Name:</label>
-                <input type="text" name="lName" class="form-control">
-            </div>
-            <div class="form-group">
-                <label class="label">Nickname:</label>
-                <input type="text" name="nName" class="form-control">
-            </div>
-            <div class="text-center">
-                <button type="submit" class="btn btn-default">Submit</button>
-            </div>
-
-        </form>
-        </div>
-        <div class="col-xs-4"></div>
+    <div class="col-xs-5"></div>
+    <div class="col-xs-2">
+        <button class="btn btn-default btn-block tbl-btn"><a href="/table">Create Table</a></button>
+        <button class="btn btn-default btn-block data-btn"><a href="/formpost2">Enter Data</a></button>
+        <button class="btn btn-default btn-block home-btn"><a href="/studentdata">View Data</a></button>
     </div>
+    <div class="col-xs-5"></div>
 </body>
 </html>

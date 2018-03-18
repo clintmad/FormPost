@@ -17,11 +17,19 @@
         <url-pattern>/formpost2</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>CreateTable</servlet-name>
-        <servlet-class>CreateTable</servlet-class>
-    </servlet>
+    <servlet-name>CreateTable</servlet-name>
+    <servlet-class>CreateTable</servlet-class>
+</servlet>
     <servlet-mapping>
         <servlet-name>CreateTable</servlet-name>
         <url-pattern>/table</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ViewData</servlet-name>
+        <servlet-class>StudentData</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewData</servlet-name>
+        <url-pattern>/studentdata</url-pattern>
     </servlet-mapping>
 </web-app>

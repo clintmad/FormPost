@@ -4,14 +4,12 @@ import java.io.*;
 import java.sql.*;
 
 public class CreateTable extends HttpServlet{
-    private String myUrl = "localhost:7070";
-
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
 
         PrintWriter out = response.getWriter();
-        Connection con = null;
-        Statement stmt = null;
+        Connection con;
+        Statement stmt;
 
         printHeader(out);
 
@@ -27,31 +25,28 @@ public class CreateTable extends HttpServlet{
         }
 
         try {
-            stmt.executeUpdate("DROP TABLE Students");
-            out.println("<b>Students Dropped</b>");
-            out.println("<br />");
+            stmt.executeUpdate("DROP TABLE students");
+            out.println("<h3 class='conn'>Students Table Dropped</h3>");
         }
         catch (SQLException e) {
-            out.println("<b>Table does not exist</b>");
+            out.println("<h3 class='conn'>Table Does Not Exist</h3>");
         }
 
         try {
-            stmt.executeUpdate("CREATE TABLE students(First CHAR(20) NOT NULL, Last CHAR(20) NOT NULL, Nick CHAR(20) NOT NULL)");
-            out.println("<b>Table Created</b>");
-            out.println("<br />");
+            stmt.executeUpdate("CREATE TABLE students(first_name CHAR(20) NOT NULL, last_name CHAR(20) NOT NULL, nickname CHAR(20) NOT NULL)");
+            out.println("<h3 class='conn'>Table Created</h3>");
         }
         catch (SQLException e) {
-            out.println("<b>Unable to create table</b>");
+            out.println("<h3 class='conn'>Unable To Create Table</h3>");
         }
 
         try {
             stmt.close();
             con.close();
-            out.println("Connection closed</b>");
-            out.println("<br />");
+            out.println("<h3 class='conn'>Connection Closed</h3>");
         }
         catch (SQLException e) {
-            out.println("<b>Close failed</b>");
+            out.println("<h3 class='conn'>Close Failed</h3>");
         }
 
         printFooter(out);
@@ -67,12 +62,23 @@ public class CreateTable extends HttpServlet{
         out.println("<title>");
         out.println("Clint Week 5");
         out.println("</title>");
+        out.println("<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>");
+        out.println("<link rel='stylesheet' href='styles/main.css' type='text/css'>");
         out.println("</head>");
-        out.println("<body>");
-        out.println("<div>");
+        out.println("<body class='container-fluid'>");
+        out.println("<div class='row text-center'>");
+        out.println("<h1 class='heading'>Success!</h1>");
+        out.println("</div>");
+        out.println("<div class='row'>");
+        out.println("<div class='col-xs-5'></div>");
+        out.println("<div class='col-xs-2 text-center'>");
     }
 
     public void printFooter(PrintWriter out){
+        out.println("<button class='btn btn-default btn-block data-btn'><a href='/formpost2'>Enter Data</a></button>");
+        out.println("<button class='btn btn-default btn-block home-btn'><a href='index.jsp'>Home</a></button>");
+        out.println("</div>");
+        out.println("<div class='col-xs-5'></div>");
         out.println("</div>");
         out.println("</body>");
         out.println("</html>");

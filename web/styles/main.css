@@ -11,7 +11,7 @@ body {
     font-size: 18px;
 }
 form {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .label {
     color: white;
@@ -21,4 +21,24 @@ form {
     color: white;
     font-size: 35px;
     margin-top: 75px;
+    margin-bottom: 30px;
+}
+.conn {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.conn2 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+.data-btn {
+    margin-top: 10px;
+}
+.home-btn {
+    margin-top: 10px;
+}
+.tbl-btn {
+    margin-top: 20px;
 }
