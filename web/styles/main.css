@@ -1,0 +1,24 @@
+body {
+    background-image: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2014/07/Hi-Tech-Wallpaper-16.jpg");
+}
+.table,
+.table tr,
+.table th,
+.table td {
+    background-color: white !important;
+}
+.table th {
+    font-size: 18px;
+}
+form {
+    margin-bottom: 50px;
+}
+.label {
+    color: white;
+    font-size: 18px;
+}
+.heading {
+    color: white;
+    font-size: 35px;
+    margin-top: 75px;
+}
